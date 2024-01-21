@@ -10,5 +10,8 @@ attach(energy_effieciency_data);
 View(energy_effieciency_data);
 
 ### checking the null  values ###
+energy_effieciency_data[!complete.cases(energy_effieciency_data),]
 
+
+#### Normality  Testing ####
 
