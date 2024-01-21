@@ -14,4 +14,8 @@ energy_effieciency_data[!complete.cases(energy_effieciency_data),]
 
 
 #### Normality  Testing ####
-
+### Install nortest package ###
+install.packages("nortest");
+### calling the library ###
+library("nortest");
+###
