@@ -33,7 +33,6 @@ lillie.test(Cooling_Load);
 ## shapiro-wilk testing ##
 shapiro.test(Cooling_Load)
 
-### correlational Analysis ###
 ### graphical  analysis
 hist(Cooling_Load, main="Cooling Load Distribution",
      xlab="cooling_load category",
@@ -43,5 +42,19 @@ curve(dnorm(x, mean=mean(Cooling_Load, na.rm=TRUE),
             sd=sd(Cooling_Load, na.rm =TRUE)), add=TRUE)
 
 ### Density  curve
-###  it describes the which  side the data distribution  is avialabe
+###  it describes the which  side the data distribution  is avialable
 lines(density(Cooling_Load), col="red")
+
+### correlational Analysis
+
+cor.test(Cooling_Load,Heating_Load, method ="pearson", alternative="two.sided")
+
+cor.test(Cooling_Load,Roof_Area, method ="pearson", alternative="two.sided")
+
+### graphically  visualization
+plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
+     xlab="Heating Load",
+     ylab="Cooling Load")
+abline(lm(Cooling_Load~Heating_Load), col="red")
+
+####
