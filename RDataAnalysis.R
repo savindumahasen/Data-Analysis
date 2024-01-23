@@ -57,4 +57,17 @@ plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
      ylab="Cooling Load")
 abline(lm(Cooling_Load~Heating_Load), col="red")
 
-####
+#### Regression Analysis ####
+### Regression  analysis
+### develop the model  by using the regression analysis
+cool_load <- lm(Cooling_Load~Heating_Load, model = TRUE)
+cool_load
+
+#### Graphical Representaion
+plot(Cooling_Load~Heating_Load, main="Cooling_load vs Heating Load")
+abline(lm(Cooling_Load~Heating_Load), col="red")
+### summary Statistics ###
+summary(cool_load)
+
+
+
