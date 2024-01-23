@@ -2,7 +2,9 @@
 ### import the data ###
 
 energy_effieciency_data <- read.csv("energy_efficiency_data.csv");
+### View the data set
 View(energy_effieciency_data)
+### check  the data types 
 str(energy_effieciency_data)
 
 ### bind the dataset with R enviornment
@@ -30,3 +32,16 @@ lillie.test(Cooling_Load);
 
 ## shapiro-wilk testing ##
 shapiro.test(Cooling_Load)
+
+### correlational Analysis ###
+### graphical  analysis
+hist(Cooling_Load, main="Cooling Load Distribution",
+     xlab="cooling_load category",
+     ylab="cooling_load",
+     prob=TRUE)
+curve(dnorm(x, mean=mean(Cooling_Load, na.rm=TRUE), 
+            sd=sd(Cooling_Load, na.rm =TRUE)), add=TRUE)
+
+### Density  curve
+###  it describes the which  side the data distribution  is avialabe
+lines(density(Cooling_Load), col="red")
