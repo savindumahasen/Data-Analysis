@@ -25,13 +25,16 @@ library("nortest");
 ### Normality Testing ###
 
 ## Anderson Darling testing ##
-ad.test(Cooling_Load);
+#ad.test(Cooling_Load);
 
 ## Lillifor Testing ##
-lillie.test(Cooling_Load);
+#lillie.test(Cooling_Load);
 
 ## shapiro-wilk testing ##
-shapiro.test(Cooling_Load);
+#shapiro.test(Cooling_Load);
+
+#since this data set has more than 500 data.  So then According to  the central limit therom
+# this Cooling_Load data variable is normalty  distributed.
 
 ### graphical  analysis
 hist(Cooling_Load, main="Cooling Load Distribution",
@@ -65,13 +68,28 @@ cor.test(Cooling_Load,Overall_Height, method="pearson", alternative ="two.sided"
 plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
      xlab="Heating Load",
      ylab="Cooling Load")
-abline(lm(Cooling_Load~Heating_Load), col="red")
+
+plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
+     xlab="Roof_Area",
+     ylab="Cooling Load")
+
+
+plot(Cooling_Load,Overall_Height, main="Cooling_Load vs Overall_Hieght",
+     xlab="Overall_Hieght",
+     ylab="Cooling Load")
+
+
+
 
 #### Regression Analysis ####
 ### Regression  analysis
 ### develop the model  by using the regression analysis
-cool_load <- lm(Cooling_Load~Heating_Load, model = TRUE)
-cool_load
+cool_load_model1 <- lm(Cooling_Load~Heating_Load, model = TRUE)
+cool_load_model1
+plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
+     xlab="Heating Load",
+     ylab="Cooling Load")
+abline(lm(Cooling_Load~Heating_Load), col="red")
 
 #### Graphical Representaion
 plot(Cooling_Load~Heating_Load, main="Cooling_load vs Heating Load")
