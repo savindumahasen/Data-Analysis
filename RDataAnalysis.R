@@ -31,7 +31,7 @@ ad.test(Cooling_Load);
 lillie.test(Cooling_Load);
 
 ## shapiro-wilk testing ##
-shapiro.test(Cooling_Load)
+shapiro.test(Cooling_Load);
 
 ### graphical  analysis
 hist(Cooling_Load, main="Cooling Load Distribution",
@@ -50,6 +50,16 @@ lines(density(Cooling_Load), col="red")
 cor.test(Cooling_Load,Heating_Load, method ="pearson", alternative="two.sided")
 
 cor.test(Cooling_Load,Roof_Area, method ="pearson", alternative="two.sided")
+
+cor.test(Cooling_Load,Glazing_Area_Distribution, method="pearson", alternative="two.sided")
+
+cor.test(Cooling_Load,Glazing_Area, method="pearson", alternative ="two.sided")
+
+cor.test(Cooling_Load,Orientation, method="pearson", alternative ="two.sided")
+
+cor.test(Cooling_Load,Overall_Height, method="pearson", alternative ="two.sided")
+
+
 
 ### graphically  visualization
 plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
