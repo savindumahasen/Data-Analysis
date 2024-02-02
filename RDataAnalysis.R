@@ -17,36 +17,7 @@ energy_effieciency_data[!complete.cases(energy_effieciency_data),]
 ### summary about the data set ###
 summary(energy_effieciency_data);
 
-#### Normality  Testing ####
-### Install nortest package ###
-#install.packages("nortest");
-### calling the library ###
-#library("nortest");
-### Normality Testing ###
 
-## Anderson Darling testing ##
-#ad.test(Cooling_Load);
-
-## Lillifor Testing ##
-#lillie.test(Cooling_Load);
-
-## shapiro-wilk testing ##
-#shapiro.test(Cooling_Load);
-
-#since this data set has more than 500 data.  So then According to  the central limit therom
-# this Cooling_Load data variable is normalty  distributed.
-
-### graphical  analysis
-#hist(Cooling_Load, main="Cooling Load Distribution",
-     #xlab="cooling_load category",
-     #ylab="cooling_load",
-    # prob=TRUE)
-#curve(dnorm(x, mean=mean(Cooling_Load, na.rm=TRUE), 
-            #sd=sd(Cooling_Load, na.rm =TRUE)), add=TRUE)
-
-### Density  curve
-###  it describes the which  side the data distribution  is avialable
-#lines(density(Cooling_Load), col="red")
 
 ### correlational Analysis
 
@@ -102,10 +73,19 @@ plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
      ylab="Cooling Load")
 abline(lm(Cooling_Load~Roof_Area), col="red")
 
+### Summary  Statisitics
+summary(cool_load_model2)
+
+cool_load_model2 <- lm(Cooling_Load~Orientation, model=TRUE)
+cool_load_model2
+plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
+     xlab="Roof_Area",
+     ylab="Cooling Load")
+abline(lm(Cooling_Load~Roof_Area), col="red")
 
 
 #### Graphical Representaion
-plot(Cooling_Load~Heating_Load, main="Cooling_load vs Heating Load")
+plot(Cooling_Load~1/Heating_Load, main="Cooling_load vs Heating Load")
 abline(lm(Cooling_Load~Heating_Load), col="red")
 ### summary Statistics ###
 
