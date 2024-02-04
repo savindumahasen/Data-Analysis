@@ -76,18 +76,18 @@ abline(lm(Cooling_Load~Roof_Area), col="red")
 ### Summary  Statisitics
 summary(cool_load_model2)
 
-cool_load_model2 <- lm(Cooling_Load~Orientation, model=TRUE)
-cool_load_model2
-plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
-     xlab="Roof_Area",
+cool_load_model3 <- lm(Cooling_Load~Overall_Height, model=TRUE)
+cool_load_model3
+plot(Cooling_Load,Overall_Height, main="Cooling_Load vs Overall-Hieght",
+     xlab="Overall_Height",
      ylab="Cooling Load")
-abline(lm(Cooling_Load~Roof_Area), col="red")
+abline(lm(Cooling_Load~Overall_Height), col="red")
+
+#### summary statistics
+summary(cool_load_model3)
 
 
-#### Graphical Representaion
-plot(Cooling_Load~1/Heating_Load, main="Cooling_load vs Heating Load")
-abline(lm(Cooling_Load~Heating_Load), col="red")
-### summary Statistics ###
+### Multiple Linear regression analysis
 
 
 
