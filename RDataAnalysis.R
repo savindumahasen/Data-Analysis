@@ -88,7 +88,14 @@ summary(cool_load_model3)
 
 
 ### Multiple Linear regression analysis
+#independent variables -Heating_Load,Roof_Area, Overall-Height
+My_Sal_All_Model <- lm(Cooling_Load~Heating_Load+Roof_Area+Overall_Height, model=TRUE)
+My_Sal_All_Model
+summary(My_Sal_All_Model)
 
 
-
-
+library('Rcmdr')
+scatterplotMatrix(~Cooling_Load+Heating_Load+Overall_Height+Roof_Area, 
+                     regLine=TRUE, smooth=FALSE, diagonal=list(method="density"), 
+                    data=energy_effieciency_data,col="red")
+> 
