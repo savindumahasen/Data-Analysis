@@ -36,16 +36,16 @@ cor.test(Cooling_Load,Overall_Height, method="pearson", alternative ="two.sided"
 
 
 ### graphically  visualization
-plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
+plot(Cooling_Load~Heating_Load, main="Cooling_Load vs Heating Load",
      xlab="Heating Load",
      ylab="Cooling Load")
 
-plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
+plot(Cooling_Load~Roof_Area, main="Cooling_Load vs Roof_Area",
      xlab="Roof_Area",
      ylab="Cooling Load")
 
 
-plot(Cooling_Load,Overall_Height, main="Cooling_Load vs Overall_Hieght",
+plot(Cooling_Load~Overall_Height, main="Cooling_Load vs Overall_Height",
      xlab="Overall_Hieght",
      ylab="Cooling Load")
 
@@ -57,7 +57,7 @@ plot(Cooling_Load,Overall_Height, main="Cooling_Load vs Overall_Hieght",
 ### develop the model  by using the Simple Linear regression analysis
 cool_load_model1 <- lm(Cooling_Load~Heating_Load, model = TRUE)
 cool_load_model1
-plot(Cooling_Load,Heating_Load, main="Cooling_Load vs Heating Load",
+plot(Cooling_Load~Heating_Load, main="Cooling_Load vs Heating Load",
      xlab="Heating Load",
      ylab="Cooling Load")
 abline(lm(Cooling_Load~Heating_Load), col="red")
@@ -68,7 +68,9 @@ summary(cool_load_model1)
 
 cool_load_model2 <- lm(Cooling_Load~Roof_Area, model=TRUE)
 cool_load_model2
-plot(Cooling_Load,Roof_Area, main="Cooling_Load vs Roof_Area",
+### 
+#library('Rcmdr')
+plot(Cooling_Load~Roof_Area,main="Cooling_Load vs Roof_Area",
      xlab="Roof_Area",
      ylab="Cooling Load")
 abline(lm(Cooling_Load~Roof_Area), col="red")
@@ -78,7 +80,7 @@ summary(cool_load_model2)
 
 cool_load_model3 <- lm(Cooling_Load~Overall_Height, model=TRUE)
 cool_load_model3
-plot(Cooling_Load,Overall_Height, main="Cooling_Load vs Overall-Hieght",
+plot(Cooling_Load~Overall_Height, main="Cooling_Load vs Overall-Hieght",
      xlab="Overall_Height",
      ylab="Cooling Load")
 abline(lm(Cooling_Load~Overall_Height), col="red")
