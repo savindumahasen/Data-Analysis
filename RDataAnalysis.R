@@ -21,17 +21,17 @@ summary(energy_effieciency_data);
 
 ### correlational Analysis
 
-cor.test(Cooling_Load,Heating_Load, method ="pearson", alternative="two.sided")
+cor.test(Cooling_Load,Heating_Load, method ="spearman", alternative="two.sided")
 
-cor.test(Cooling_Load,Roof_Area, method ="pearson", alternative="two.sided")
+cor.test(Cooling_Load,Roof_Area, method ="spearman", alternative="two.sided")
 
-cor.test(Cooling_Load,Glazing_Area_Distribution, method="pearson", alternative="two.sided")
+cor.test(Cooling_Load,Glazing_Area_Distribution, method="spearman", alternative="two.sided")
 
-cor.test(Cooling_Load,Glazing_Area, method="pearson", alternative ="two.sided")
+cor.test(Cooling_Load,Glazing_Area, method="spearman", alternative ="two.sided")
 
-cor.test(Cooling_Load,Orientation, method="pearson", alternative ="two.sided")
+cor.test(Cooling_Load,Orientation, method="spearman", alternative ="two.sided")
 
-cor.test(Cooling_Load,Overall_Height, method="pearson", alternative ="two.sided")
+cor.test(Cooling_Load,Overall_Height, method="spearman", alternative ="two.sided")
 
 
 
