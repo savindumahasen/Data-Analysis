@@ -125,33 +125,66 @@ curve(dnorm(x, mean=mean(Cooling_Load, na.rm=TRUE), sd=sd(Cooling_Load, na.rm=TR
 
 cor.test(Cooling_Load,Heating_Load, method ="spearman", alternative="two.sided")
 
+## call the Rcmdr library
+library(Rcmdr)
+
+## Scatteplot for Cooling_Load Vs Heating_Load
+
+scatterplot(Cooling_Load~Heating_Load, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Heating_Load", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Heating_Load Scatterplot", 
+            data=energy_effieciency_data)
+
+
 cor.test(Cooling_Load,Roof_Area, method ="spearman", alternative="two.sided")
+
+
+## Scatteplot for Cooling_Load Vs Roof_Area
+
+scatterplot(Cooling_Load~Roof_Area, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Roof_Area", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Roof_Area Scatterplot", 
+            data=energy_effieciency_data)
 
 cor.test(Cooling_Load,Glazing_Area_Distribution, method="spearman", alternative="two.sided")
 
+
+## Scatteplot for Cooling_Load Vs Glazing_Area_Distribution
+
+scatterplot(Cooling_Load~Glazing_Area_Distribution, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Glazing_Area_Distribution", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Glazing_Area_Distribution Scatterplot", 
+            data=energy_effieciency_data)
+
 cor.test(Cooling_Load,Glazing_Area, method="spearman", alternative ="two.sided")
 
+
+## Scatteplot for Cooling_Load Vs Glazing_Area
+
+scatterplot(Cooling_Load~Glazing_Area, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Glazing_Area", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Glazing_Area Scatterplot", 
+            data=energy_effieciency_data)
+
 cor.test(Cooling_Load,Orientation, method="spearman", alternative ="two.sided")
+
+## Scatteplot for Cooling_Load Vs Orientation
+
+scatterplot(Cooling_Load~Orientation, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Orientation", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Orientation Scatterplot", 
+            data=energy_effieciency_data)
+
 
 cor.test(Cooling_Load,Overall_Height, method="spearman", alternative ="two.sided")
 
 
+## Scatteplot for Cooling_Load Vs Overall_Height
 
-### graphically  visualization
-plot(Cooling_Load~Heating_Load, main="Cooling_Load vs Heating Load",
-     xlab="Heating Load",
-     ylab="Cooling Load")
-
-plot(Cooling_Load~Roof_Area, main="Cooling_Load vs Roof_Area",
-     xlab="Roof_Area",
-     ylab="Cooling Load")
-
-
-plot(Cooling_Load~Overall_Height, main="Cooling_Load vs Overall_Height",
-     xlab="Overall_Hieght",
-     ylab="Cooling Load")
-
-
+scatterplot(Cooling_Load~Overall_Height, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Overall_Height", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Overall_Height Scatterplot", 
+            data=energy_effieciency_data)
 
 
 #### Regression Analysis ####
