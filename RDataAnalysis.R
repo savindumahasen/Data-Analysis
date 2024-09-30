@@ -235,4 +235,3 @@ library('Rcmdr')
 scatterplotMatrix(~Cooling_Load+Heating_Load+Overall_Height+Roof_Area, 
                      regLine=TRUE, smooth=FALSE, diagonal=list(method="density"), 
                     data=energy_effieciency_data,col="red")
-> 
