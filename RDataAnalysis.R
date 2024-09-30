@@ -18,6 +18,13 @@ energy_effieciency_data[!complete.cases(energy_effieciency_data),]
 summary(energy_effieciency_data);
 
 
+### Normality testing
+## install the library
+install.packages("nortest")
+
+## call the library
+library("nortest")
+
 
 ### correlational Analysis
 
