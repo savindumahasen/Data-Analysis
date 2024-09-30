@@ -138,12 +138,40 @@ scatterplot(Cooling_Load~Heating_Load, regLine=TRUE, smooth=FALSE,
 
 cor.test(Cooling_Load,Roof_Area, method ="spearman", alternative="two.sided")
 
-
-## Scatteplot for Cooling_Load Vs Roof_Area
+## Scatterplot for Cooling_Load Vs Roof_Area
 
 scatterplot(Cooling_Load~Roof_Area, regLine=TRUE, smooth=FALSE, 
             boxplots=FALSE, xlab="Roof_Area", ylab="Cooling_Load", 
             main="Cooling_Load Vs Roof_Area Scatterplot", 
+            data=energy_effieciency_data)
+
+cor.test(Cooling_Load, Relative_Compactness, method="spearman", alternative = "two.sided")
+
+## Scatterplot for Cooling_Load Vs Roof_Area
+
+scatterplot(Cooling_Load~Relative_Compactness, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Relative_Compactness", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Roof_Area Scatterplot", 
+            data=energy_effieciency_data)
+
+
+cor.test(Cooling_Load,Surface_Area, method="spearman", alternative="two.sided")
+
+##Scatterplot for Cooling_Load Vs Surface_Area
+
+scatterplot(Cooling_Load~Surface_Area, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Surface_Area", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Surface_Area Scatterplot", 
+            data=energy_effieciency_data)
+
+
+cor.test(Cooling_Load, Wall_Area, method="spearman", alternative = "two.sided")
+
+## Scatteplot for Cooling_Load Vs Wall_Area
+
+scatterplot(Cooling_Load~Wall_Area, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="Wall_Area", ylab="Cooling_Load", 
+            main="Cooling_Load Vs Wall_Area Scatterplot", 
             data=energy_effieciency_data)
 
 cor.test(Cooling_Load,Glazing_Area_Distribution, method="spearman", alternative="two.sided")
